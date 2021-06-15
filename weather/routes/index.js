@@ -4,6 +4,7 @@ const fetch = require("node-fetch");
 require('dotenv').config();
 const OWM_API_KEY = process.env.OWM_API_KEY || 'invalid_key';
 const UNITS = process.env.UNITS || 'metric';
+const OWM_API_KEY = process.env.OWM_API_KEY || 'invalid_key';
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -12,8 +13,9 @@ router.get('/', function(req, res) {
 
 router.post('/get_weather', async function (req,res) {
   let city = req.body.city;
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${UNITS}&appid=${OWM_API_KEY}`;
-
+  //let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${UNITS}&appid=${OWM_API_KEY}`;
+  let url = http://api.openweathermap.org/data/2.5/weather?q=${city}&units=
+  ${UNITS}&appid=${4074cc663a966996f10a488a6b602e57};
   try {
     let data = await fetch(url);
     let weather = await data.json();
